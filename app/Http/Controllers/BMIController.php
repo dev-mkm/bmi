@@ -33,15 +33,15 @@ class BMIController extends Controller
         } elseif ($bmi < 25) {
             $weight = 18.5 * $height;
 
-            return abs($validated['weight'] - $weight) + 1 .' KG';
+            return floor($validated['weight'] - $weight) + 1 .' KG';
         } elseif ($bmi < 30) {
             $weight = 25 * $height;
 
-            return abs($validated['weight'] - $weight) + 1 .' KG';
+            return floor($validated['weight'] - $weight) + 1 .' KG';
         } else {
             $weight = 30 * $height;
 
-            return abs($validated['weight'] - $weight) + 1 .' KG';
+            return floor($validated['weight'] - $weight) + 1 .' KG';
         }
     }
 }
